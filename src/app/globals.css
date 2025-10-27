@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{scroll-behavior:smooth;}
+
+:root { color-scheme: light; }
+html, body { height: 100%; }
+body { @apply bg-cbtj-white text-cbtj-dark; }
+
+/* default button style */
+.btn {
+  @apply inline-flex items-center justify-center rounded-btn bg-cbtj-blue px-5 py-3 font-bold text-cbtj-light transition-colors duration-200;
+}
+.btn:hover { @apply bg-cbtj-red; }
+.btn-outline-red { @apply inline-flex items-center justify-center rounded-btn border-2 border-cbtj-red px-5 py-3 font-bold text-cbtj-red transition-colors duration-200; }
+.btn-outline-red:hover { @apply bg-transparent; }
+
+/* section titles */
+.section-title { @apply text-center font-extrabold text-cbtj-blue; }
+.section-subtitle { @apply mt-2 text-center text-base md:text-lg text-cbtj-dark; }
+
+/* emphasis utility required by client */
+.highlight-red { @apply font-bold text-cbtj-red; }
+
+/* grayscale overlay for partner logos */
+.logo-wrap img { filter: grayscale(1) contrast(0.85); transition: filter .2s ease; }
+.logo-wrap:hover img { filter: grayscale(0) contrast(1); }
+
+/* sticky header spacer helper */
+.header-spacer { height: 80px; }
+
+/* marquee lane sizing for ultrawide */
+.marquee-lane { @apply relative overflow-hidden w-full min-h-16 py-2; }
+.marquee-track { @apply flex items-center gap-10 min-w-max; }
+.placeholder-logo { @apply h-16 md:h-20 w-auto; }
+
+.marquee-lane > div {
+  transition: animation-play-state 0.8s ease-in-out;
+}
+
+.valores-titulo {
+  color: #FFFFFF;
+  font-weight: 600;
+}
